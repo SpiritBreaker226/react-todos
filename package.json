@@ -14,7 +14,8 @@
     "flux": "^2.0.1",
     "normalize.css": "~3.0.3",
     "object-assign": "^2.1.1",
-    "react": "~0.12.2"
+    "react": "~0.12.2",
+    "react-router": "^0.11.6"
   },
   "devDependencies": {
     "grunt": "~0.4.5",
