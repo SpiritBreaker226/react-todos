@@ -10,11 +10,6 @@ require('../styles/main.css');
 var imageURL = require('../images/yeoman.png');
 
 var ReactTodosApp = React.createClass({
-	getInitialState: function() {
-		return {
-			todos: []
-		}
-	},
 	render: function() {
 		return (
 			<main role="main" className="container">
