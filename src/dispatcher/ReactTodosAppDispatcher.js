@@ -1,9 +1,9 @@
 var Dispatcher = require('flux').Dispatcher;
 var assign = require('object-assign');
 
-var Constants = require('../constants.js');
+var ReactTodosAppConstants = require('../ReactTodosAppConstants.js');
 
-var PayloadSources = Constants.PayloadSources;
+var PayloadSources = ReactTodosAppConstants.PayloadSources;
 
 var Dispatcher = assign(new Dispatcher(), {
 	handleViewAction: function(action) {

@@ -8,7 +8,7 @@ var EventEmitter = require('events').EventEmitter;
 var routes = require('../routes.js');
 
 var ReactTodosAppDispatcher = require('../dispatcher/ReactTodosAppDispatcher.js');
-var Constants = require('../Constants.js');
+var ReactTodosAppConstants = require('../ReactTodosAppConstants.js');
 
 // var TodoStore = require('../stores/TodoStore.react.jsx');
 
@@ -17,7 +17,7 @@ var router = Router.create({
   location: null
 });
 
-var ActionTypes = Constants.ActionTypes;
+var ActionTypes = ReactTodosAppConstants.ActionTypes;
 var CHANGE_EVENT = 'change';
 
 var RouteStore = assign({}, EventEmitter.prototype, {

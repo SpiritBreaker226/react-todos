@@ -1,9 +1,9 @@
 'use strict';
 
 var ReactTodosAppDispatcher = require('../dispatcher/ReactTodosAppDispatcher.js');
-var ReactTodosConstants = require('../ReactTodosConstants.js');
+var ReactTodosAppConstants = require('../ReactTodosAppConstants.js');
 
-var ActionTypes = ReactTodosConstants.ActionTypes;
+var ActionTypes = ReactTodosAppConstants.ActionTypes;
 
 var RouteActionCreators = {
 	redirect: function(route) {
