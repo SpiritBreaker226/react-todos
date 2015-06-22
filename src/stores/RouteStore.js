@@ -5,12 +5,12 @@ var assign = require('object-assign');
 
 var EventEmitter = require('events').EventEmitter;
 
-var routes = require('../routes.jsx');
+var routes = require('../routes.js');
 
-var ReactTodosDispatcher = require('../dispatcher/ReactTodosDispatcher.js');
+var ReactTodosAppDispatcher = require('../dispatcher/ReactTodosAppDispatcher.js');
 var Constants = require('../Constants.js');
 
-var TodoStore = require('../stores/TodoStore.react.jsx');
+// var TodoStore = require('../stores/TodoStore.react.jsx');
 
 var router = Router.create({
   routes: routes,
@@ -38,10 +38,10 @@ var RouteStore = assign({}, EventEmitter.prototype, {
   }
 });
 
-RouteStore.dispatchToken = ReactTodosDispatcher.register(function(payload) {
-  ReactTodosDispatcher.waitFor([
-    TodoStore.dispatchToken
-  ]);
+RouteStore.dispatchToken = ReactTodosAppDispatcher.register(function(payload) {
+  // ReactTodosAppDispatcher.waitFor([
+  //   TodoStore.dispatchToken
+  // ]);
 
   var action = payload.action;
   
