@@ -20,7 +20,7 @@ var TodoApp = React.createClass({
     		<h2>Todos</h2>
 
         <TodoList items={this.state.items} />
-        <TodoForm />
+        <TodoForm onTodoSubmit={this.updateItems} />
       </section>
     );
   }
