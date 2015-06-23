@@ -1,10 +1,11 @@
 var React = window.React = require('react');
+var TodoList = require('./components/TodoList');
 
 var TodoApp = React.createClass({
   render: function() {
     return (
     	<div className="todoBox">
-        Hello, world! I am a TodoBox.
+        <TodoList />
       </div>
     );
   }
