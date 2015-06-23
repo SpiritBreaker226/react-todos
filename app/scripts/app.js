@@ -1,6 +1,5 @@
 
 var React = window.React = require('react'),
-    Timer = require("./ui/Timer"),
     mountNode = document.getElementById("app");
 
 var TodoList = React.createClass({
@@ -33,7 +32,6 @@ var TodoApp = React.createClass({
           <input onChange={this.onChange} value={this.state.text} />
           <button>{'Add #' + (this.state.items.length + 1)}</button>
         </form>
-        <Timer />
       </div>
     );
   }
@@ -41,4 +39,3 @@ var TodoApp = React.createClass({
 
 
 React.render(<TodoApp />, mountNode);
-
