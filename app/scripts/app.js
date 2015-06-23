@@ -8,6 +8,12 @@ var TodoApp = React.createClass({
 			items: []
 		};
 	},
+	updateItems: function(newItem) {
+		var allItems = this.state.items.concat([newItem]);
+		this.setState({
+			items: allItems
+		});
+	},
   render: function() {
     return (
     	<section className="todoBox">
