@@ -5,10 +5,12 @@ var TodoForm = require('./components/TodoForm');
 var TodoApp = React.createClass({
   render: function() {
     return (
-    	<div className="todoBox">
+    	<section className="todoBox">
+    		<h2>Todos</h2>
+
         <TodoList />
         <TodoForm />
-      </div>
+      </section>
     );
   }
 });
