@@ -3,7 +3,9 @@ var React = window.React = require('react');
 var TodoApp = React.createClass({
   render: function() {
     return (
-      <div />
+    	<div className="todoBox">
+        Hello, world! I am a TodoBox.
+      </div>
     );
   }
 });
