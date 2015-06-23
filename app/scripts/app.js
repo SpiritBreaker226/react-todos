@@ -1,6 +1,4 @@
-
-var React = window.React = require('react'),
-    mountNode = document.getElementById("app");
+var React = window.React = require('react');
 
 var TodoApp = React.createClass({
   render: function() {
@@ -9,4 +7,7 @@ var TodoApp = React.createClass({
   }
 });
 
-React.render(<TodoApp />, mountNode);
+React.render(
+  <TodoApp />, 
+  document.getElementById("app")
+);
