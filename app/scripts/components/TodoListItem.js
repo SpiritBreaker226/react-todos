@@ -4,8 +4,12 @@ var React = require('react');
 
 var TodoListItem = React.createClass({
 	render: function() {
+		var checked = (this.props.done === false) ? '' : 'checked';
 		return (
-			<li>{this.props.children}</li>
+			<li>
+				<input type="checkbox" ref="done" checked={checked} />
+				{this.props.children}
+			</li>
 		);
 	}
 });
