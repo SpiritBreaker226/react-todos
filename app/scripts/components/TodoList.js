@@ -1,7 +1,7 @@
 'use strict';
 
 var React = require('react');
-var TodoItem = require('TodoItem');
+var TodoItem = require('../components/TodoItem');
 
 var TodoList = React.createClass({
 	render: function() {
