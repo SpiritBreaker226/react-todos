@@ -3,7 +3,7 @@
 var React = require('react');
 
 var TodoForm = React.createClass({
-	_onSubmit: Function(e) {
+	_onSubmit: function(e) {
 		e.preventDefault();
 
 		var text = React.findDOMNode(this.refs.text).value.trim();
