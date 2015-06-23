@@ -7,7 +7,9 @@ var TodoList = React.createClass({
 	render: function() {
 		return (
 			<div className="todoList">
-				 <TodoListItem />
+				 {
+				 		this.props.items
+				 }
       </div>
 		);
 	}

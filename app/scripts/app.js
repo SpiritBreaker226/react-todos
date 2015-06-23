@@ -13,7 +13,7 @@ var TodoApp = React.createClass({
     	<section className="todoBox">
     		<h2>Todos</h2>
 
-        <TodoList />
+        <TodoList items={this.state.items} />
         <TodoForm />
       </section>
     );
