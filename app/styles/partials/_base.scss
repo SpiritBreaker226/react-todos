@@ -1,2 +1,10 @@
 $primary-colour: #B6995A !default;
 $secondary-colour: #FFF !default;
+
+body {
+	color: $primary-colour;
+}
+
+header {
+	color: $secondary-colour;
+}
