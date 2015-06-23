@@ -3,6 +3,11 @@ var TodoList = require('./components/TodoList');
 var TodoForm = require('./components/TodoForm');
 
 var TodoApp = React.createClass({
+	getInitialState: function() {
+		return {
+			items: ['Testing']
+		};
+	},
   render: function() {
     return (
     	<section className="todoBox">
