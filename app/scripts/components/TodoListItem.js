@@ -5,9 +5,7 @@ var React = require('react');
 var TodoListItem = React.createClass({
 	render: function() {
 		return (
-			<div className="todoItem">
-				Hello World, todoItem
-			</div>
+			<li>{this.props.children}</li>
 		);
 	}
 });

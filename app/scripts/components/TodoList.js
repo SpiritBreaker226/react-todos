@@ -7,9 +7,15 @@ var TodoList = React.createClass({
 	render: function() {
 		return (
 			<div className="todoList">
+				 <ul>
 				 {
-				 		this.props.items
+				 		this.props.items.map(function(item) {
+				 			return (
+				 				<TodoListItem>{item}</TodoListItem>
+				 			);
+				 		})
 				 }
+				 </ul>
       </div>
 		);
 	}
