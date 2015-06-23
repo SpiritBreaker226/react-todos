@@ -5,9 +5,10 @@ var React = require('react');
 var TodoForm = React.createClass({
 	render: function() {
 		return (
-			<div className="todoForm">
-        Hello, world! I am a TodoForm.
-      </div>
+			<form className='todoForm'>
+				<input type='text' ref='item' />
+				<input type='submit' value='Add' />
+			</form>
 		);
 	}
 });
