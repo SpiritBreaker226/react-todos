@@ -2,14 +2,14 @@
 
 var React = require('react');
 
-var TodoItem = React.createClass({
+var TodoListItem = React.createClass({
 	render: function() {
 		return (
 			<div className="todoItem">
-        Hello World, todoItem
-      </div>
+				Hello World, todoItem
+			</div>
 		);
 	}
 });
 
-module.exports = TodoItem;
+module.exports = TodoListItem;
