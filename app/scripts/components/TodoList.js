@@ -1,13 +1,21 @@
 'use strict';
 
 var React = require('react');
-var TodoItem = require('TodoItem');
+var TodoListItem = require('../components/TodoListItem');
 
 var TodoList = React.createClass({
 	render: function() {
 		return (
 			<div className="todoList">
-        <TodoItem />
+				 <ul>
+				 {
+				 		this.props.items.map(function(item) {
+				 			return (
+				 				<TodoListItem>{item}</TodoListItem>
+				 			);
+				 		})
+				 }
+				 </ul>
       </div>
 		);
 	}
