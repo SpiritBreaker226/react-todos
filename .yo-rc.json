@@ -1,8 +1,0 @@
-{
-  "generator-react-webpack": {
-    "app-name": "reactTodos",
-    "architecture": "flux",
-    "styles-language": "scss",
-    "component-suffix": "js"
-  }
-}
