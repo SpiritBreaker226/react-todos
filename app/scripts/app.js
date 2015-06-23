@@ -5,8 +5,14 @@ var TodoForm = require('./components/TodoForm');
 var TodoApp = React.createClass({
 	getInitialState: function() {
 		return {
-			items: ['Testing']
+			items: []
 		};
+	},
+	updateItems: function(newItem) {
+		var allItems = this.state.items.concat([newItem]);
+		this.setState({
+			items: allItems
+		});
 	},
   render: function() {
     return (
@@ -14,7 +20,7 @@ var TodoApp = React.createClass({
     		<h2>Todos</h2>
 
         <TodoList items={this.state.items} />
-        <TodoForm />
+        <TodoForm onTodoSubmit={this.updateItems} />
       </section>
     );
   }

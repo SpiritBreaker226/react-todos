@@ -3,11 +3,27 @@
 var React = require('react');
 
 var TodoForm = React.createClass({
+	_onSubmit: function(e) {
+		e.preventDefault();
+
+		var text = React.findDOMNode(this.refs.text).value.trim();
+
+		if(!text) {
+			return;
+		}
+
+		this.props.onTodoSubmit(text);
+
+		React.findDOMNode(this.refs.text).value = '';
+
+		return;
+	},
 	render: function() {
 		return (
-			<div className="todoForm">
-        Hello, world! I am a TodoForm.
-      </div>
+			<form className='todoForm' onSubmit={this._onSubmit}>
+				<input type='text' ref='text' />
+				<input type='submit' value='Add' />
+			</form>
 		);
 	}
 });
