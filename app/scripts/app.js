@@ -7,7 +7,7 @@ var TodoForm = require('./components/TodoForm');
 var TodoApp = React.createClass({
 	getInitialState: function() {
 		return {
-			items: []
+			items: ['The Frist', 'Secand', 'The End']
 		};
 	},
 	updateItems: function(newItem) {
