@@ -1,3 +1,5 @@
+'use strict';
+
 var React = window.React = require('react');
 var TodoList = require('./components/TodoList');
 var TodoForm = require('./components/TodoForm');
