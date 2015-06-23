@@ -5,17 +5,16 @@ var TodoListItem = require('../components/TodoListItem');
 
 var TodoList = React.createClass({
 	render: function() {
+		var todoListNode = this.props.items.map(function(item) {
+ 			return (
+ 				<TodoListItem>
+ 					{item}
+ 				</TodoListItem>
+ 			);
+ 		});
 		return (
 			<div className="todoList">
-				 <ul>
-				 {
-				 		this.props.items.map(function(item) {
-				 			return (
-				 				<TodoListItem>{item}</TodoListItem>
-				 			);
-				 		})
-				 }
-				 </ul>
+				<ul>{todoListNode}</ul>
       </div>
 		);
 	}
