@@ -4,8 +4,11 @@ var React = require('react');
 
 var TodoListItem = React.createClass({
 	_onChange: function(e) {
+		var oppositeOfThisItemsDone = !this.props.done;
+
 		this.props.onTodoItemUpdate({
-			// TODO Set Changes
+			key: this.props.reactKey,
+			done: oppositeOfThisItemsDone
 		});
 	},
 	render: function() {
