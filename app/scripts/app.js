@@ -9,14 +9,17 @@ var TodoApp = React.createClass({
 		return {
 			items: [
 				{
+					id: 1,
 					text: 'The Frist',
 					done: false
 				},
 				{
+					id: 2,
 					text: 'Secand',
 					done: false
 				}, 
 				{
+					id: 3,
 					text: 'The End',
 					done: true
 				}

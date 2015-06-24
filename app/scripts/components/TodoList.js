@@ -7,7 +7,7 @@ var TodoList = React.createClass({
 	render: function() {
 		var todoListNode = this.props.items.map(function(item) {
  			return (
- 				<TodoListItem done={item.done}>
+ 				<TodoListItem done={item.done} key={item.id}>
  					{item.text}
  				</TodoListItem>
  			);
