@@ -25,12 +25,23 @@ var TodoApp = React.createClass({
 	},
 	addToItems: function(newItem) {
 		var allItems = this.state.items.concat([newItem]);
+	
 		this.setState({
 			items: allItems
 		});
 	},
 	_updateItem: function(updatedItem) {
-		//TODO: update Item
+		var allItems = this.state.items.map(function(item, index) {
+			if(updatedItem.key === index) {
+				item.done = updatedItem.done;
+			}
+
+			return item;
+		});
+
+		this.setState({
+			items: allItems
+		});
 	},
   render: function() {
     return (
