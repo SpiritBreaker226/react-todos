@@ -14,13 +14,14 @@ var TodoListItem = React.createClass({
 	render: function() {
 		var checked = (this.props.done === false) ? '' : 'checked';
 		return (
-			<li>
-				<input 
-				type="checkbox" 
-				ref="done" 
-				checked={checked} 
-				onChange={this._onChange} />
-				{this.props.children}
+			<li className="todoList-checkbox">
+		    <label>
+		      <input 
+						type="checkbox" 
+						ref="done" 
+						checked={checked} 
+						onChange={this._onChange} /> {this.props.children}
+		    </label>
 			</li>
 		);
 	}
