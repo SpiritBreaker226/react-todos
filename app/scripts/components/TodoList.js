@@ -11,6 +11,7 @@ var TodoList = React.createClass({
  				<TodoListItem 
  					done={item.done} 
  					key={item.id} 
+ 					reactKey={item.id} 
  					onTodoItemUpdate={self.props.onTodoItemUpdate}
  				>
  					{item.text}
