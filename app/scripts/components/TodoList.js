@@ -5,9 +5,14 @@ var TodoListItem = require('../components/TodoListItem');
 
 var TodoList = React.createClass({
 	render: function() {
+		var self = this;
 		var todoListNode = this.props.items.map(function(item) {
  			return (
- 				<TodoListItem done={item.done} key={item.id}>
+ 				<TodoListItem 
+ 					done={item.done} 
+ 					key={item.id} 
+ 					onTodoItemUpdate={self.props.onTodoItemUpdate}
+ 				>
  					{item.text}
  				</TodoListItem>
  			);

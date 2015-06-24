@@ -32,12 +32,17 @@ var TodoApp = React.createClass({
 			items: allItems
 		});
 	},
+	_updateItem: function(updatedItem) {
+		//TODO: update Item
+	},
   render: function() {
     return (
     	<section className="todoBox">
     		<h2>Todos</h2>
 
-        <TodoList items={this.state.items} />
+        <TodoList 
+        	items={this.state.items} 
+        	onTodoItemUpdate={this._updateItem} />
         <TodoForm onTodoSubmit={this.addToItems} />
       </section>
     );
