@@ -12,7 +12,10 @@ var TodoForm = React.createClass({
 			return;
 		}
 
-		this.props.onTodoSubmit(text);
+		this.props.onTodoSubmit({
+			text: text,
+			done: false
+		});
 
 		React.findDOMNode(this.refs.text).value = '';
 
