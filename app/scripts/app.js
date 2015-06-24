@@ -23,7 +23,7 @@ var TodoApp = React.createClass({
 			]
 		};
 	},
-	addToItems: function(newItem) {
+	_addToItems: function(newItem) {
 		var allItems = this.state.items.concat([newItem]);
 	
 		this.setState({
@@ -51,7 +51,7 @@ var TodoApp = React.createClass({
         <TodoList 
         	items={this.state.items} 
         	onTodoItemUpdate={this._updateItem} />
-        <TodoForm onTodoSubmit={this.addToItems} />
+        <TodoForm onTodoSubmit={this._addToItems} />
       </section>
     );
   }
