@@ -6,12 +6,12 @@ var TodoListItem = require('../components/TodoListItem');
 var TodoList = React.createClass({
 	render: function() {
 		var self = this;
-		var todoListNode = this.props.items.map(function(item) {
+		var todoListNode = this.props.items.map(function(item, index) {
  			return (
  				<TodoListItem 
  					done={item.done} 
- 					key={item.id} 
- 					reactKey={item.id} 
+ 					key={index} 
+ 					reactKey={index} 
  					onTodoItemUpdate={self.props.onTodoItemUpdate}
  				>
  					{item.text}
